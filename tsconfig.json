@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+      "noUnusedLocals": true,
+      "resolveJsonModule": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "esnext",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "pretty": true,
+      "outDir": "dist",
+      "baseUrl": "./src",
+      "strict": false,
+      "plugins": [
+          {"transform": "ts-transformer-keys/transformer"}
+      ],
+      "paths": {
+        "*": [
+          "node_modules/*",
+          "src/*"
+        ],
+        "@app/*": ["*"],
+        "@test/*": ["test/*"],
+        "@controller/*": ["controller/*"],
+        "@middleware/*": ["middleware/*"]
+      },
+      "lib": [
+        "es2015",
+        "es6",
+        "es7",
+        "dom",
+        "es2018",
+        "esnext"
+      ],
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true
+    },
+    "include": [
+      "src/**/*"
+    ]
+  }

@@ -1,0 +1,53 @@
+{
+  "name": "bezNFT_trust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build-ts": "rm -rf dist && ttsc",
+    "serve": "node dist/server.js",
+    "start": "npm run serve",
+    "test": "node_modules/.bin/mocha dist/test/ --recursive --reporter list --exit --require dist/test/bootstrap --require choma"
+  },
+  "author": "Talabi",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@app": "dist",
+    "@controller": "dist/controller",
+    "@middleware": "dist/middleware",
+    "@test": "dist/test"
+  },
+  "dependencies": {
+    "@3rdweb/sdk": "^1.19.1",
+    "@spacehq/sdk": "^0.0.30",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "reflect-metadata": "^0.1.13",
+    "routing-controllers": "^0.9.0",
+    "ts-transformer-keys": "^0.4.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/chai-as-promised": "^7.1.4",
+    "@types/chai-datetime": "^0.0.37",
+    "@types/chai-subset": "^1.3.3",
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.0.0",
+    "@types/nock": "^11.1.0",
+    "chai": "^4.3.4",
+    "chai-datetime": "^1.8.0",
+    "chai-http": "^4.3.0",
+    "chai-subset": "^1.6.0",
+    "choma": "^1.2.1",
+    "mocha": "^9.1.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "nock": "^13.1.3",
+    "ts-node": "^10.2.1",
+    "ttypescript": "^1.5.12",
+    "typescript": "^4.4.2"
+  }
+}
